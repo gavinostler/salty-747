@@ -108,7 +108,7 @@ html {
 
 @font-face {
   font-family: "B787";
-  src: url("/Pages/VCockpit/Instruments/Airliners/WTB747_8i/Assets/fonts/b78x.ttf") format("truetype");
+  src: url("/Pages/VCockpit/Instruments/b74s/Assets/fonts/b78x.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -1412,12 +1412,14 @@ wtb748-mfd {
   position: absolute;
   bottom: 9px;
   left: 0;
-  width: 100%;
+  width: 380px;
   height: 150px;
   display: flex;
   justify-content: space-between;
   color: var(--boeing-colors-cyan);
   font-size: 30px;
+  /* NOTE: Force overflow clipping to allow this element to be a layout boundary. */
+  overflow: hidden;
 }
 
 .cabin-press-container .cabin-press-data-container {
@@ -1607,6 +1609,7 @@ wtb748-mfd {
   position: relative;
   color: var(--boeing-colors-white);
 }
+
 .b748-CAS-container {
   position: absolute;
   right: -20px;
@@ -1777,6 +1780,8 @@ wtb748-mfd {
   bottom: 0;
   width: 389px;
   height: 97px;
+  /* NOTE: Force overflow clipping to allow this element to be a layout boundary. */
+  overflow: hidden;
 }
 
 .fuel-qty-gauge-container .fuel-title {
@@ -1993,6 +1998,7 @@ wtb748-mfd {
   left: 76px;
   font-size: 25px;
 }
+
 .landing-gear-gauge-container {
   display: flex;
   flex-direction: column;
@@ -2167,28 +2173,29 @@ wtb748-mfd {
 }
 .b748-EICAS-primary-gauge-container {
   position: absolute;
-  top: 98px;
-  left: 31px;
+  top: 60px;
+  left: 42px;
   width: 444px;
   height: 524px;
   display: flex;
   justify-content: space-between;
   font-size: 24px;
   transform: rotateX(0deg);
+  /* NOTE: Force overflow clipping to allow this element to be a layout boundary. */
+  overflow: hidden;
 }
 
-.upper-bar-column {
+.upper-bar-column-primary {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90px;
+  width: 100px;
+  padding-left: 10px;
 }
 
 .bar-gauge.n1-bar-gauge {
   height: 289px;
-  margin-top: -38px;
-  margin-left: 21px
 }
 
 .bar-gauge.n1-bar-gauge .above-box-text {
@@ -2203,13 +2210,12 @@ wtb748-mfd {
   height: 165px;
   font-size: 30px;
   margin-top: 73px;
-  margin-left: 20px;
 }
 
 .eai-indication {
   position: absolute;
-  left: 4px;
-  top: 140px;
+  left: 0px;
+  top: 180px;
 }
 
 .wai-indication {
@@ -2259,6 +2265,7 @@ wtb748-mfd {
   width: 300px;
   left: 435px;
 }
+
 .fuel-flow-value-box {
   position: absolute;
   bottom: 0;
@@ -2576,9 +2583,11 @@ wtb748-mfd {
   justify-content: space-between;
   width: 100%;
   height: 268px;
+  /* NOTE: Force overflow clipping to allow this element to be a layout boundary. */
+  overflow: hidden;
 }
 
-.upper-bar-column {
+.upper-bar-column-secondary {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2663,6 +2672,7 @@ wtb748-mfd {
 .title-VIB {
   top: 684px
 }
+
 .sys-elec-page-container {
   position: absolute;
   top: 0;
@@ -5444,4 +5454,7 @@ wtb748-mfd {
 .stat-page-container-datetime .stat-datetime-clock-content {
   width: 100%;
 }
-wtb748-mfd {}
+wtb748-mfd {
+  /* Work around an issue where the boundaries between different elements are sometimes displayed as transparent. */
+  background: var(--boeing-colors-black);
+}

@@ -84,7 +84,7 @@ html {
 
 @font-face {
   font-family: "B787";
-  src: url("/Pages/VCockpit/Instruments/Airliners/WTB747_8i/Assets/fonts/b78x.ttf") format("truetype");
+  src: url("/Pages/VCockpit/Instruments/b74s/Assets/fonts/b78x.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -289,7 +289,7 @@ div.fmc-letter.s-text {
 }
 @font-face {
   font-family: "B748Cdu";
-  src: url("/Pages/VCockpit/Instruments/Airliners/WTB747_8i/Assets/fonts/b78x.ttf") format("truetype");
+  src: url("/Pages/VCockpit/Instruments/b74s/Assets/fonts/b78x.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
