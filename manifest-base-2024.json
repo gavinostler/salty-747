@@ -1,0 +1,22 @@
+{
+    "dependencies": [
+        {
+            "name": "asobo-aircraft-b7478i",
+            "package_version": "2.1.7"
+        }
+    ],
+    "content_type": "AIRCRAFT",
+    "title": "Salty 747-8 (MSFS 2024 trial)",
+    "manufacturer": "Boeing",
+    "creator": "Salty Simulations",
+    "minimum_game_version": "1.8.10",
+    "minimum_compatibility_version": "8.10.0.234",
+    "builder": "Microsoft Flight Simulator 2024",
+    "package_order_hint": "SIMOBJECTS_PATCH",
+    "release_notes": {
+        "neutral": {
+            "LastUpdate": "",
+            "OlderHistory": ""
+        }
+    }
+}

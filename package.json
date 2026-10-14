@@ -4,6 +4,7 @@
     "description": "An open-source modification for the default MSFS 747-8, aiming to improve the lacking features and realism of the default aircraft.",
     "scripts": {
         "build:layout": "node scripts/build.js",
+        "build:2024": "node scripts/build-2024.js",
         "build:instruments": "mach build -c src/instruments/mach.config.js",
         "build:models": "node src/models/build.js",
         "build": "npm run build:instruments && npm run build:models && npm run build:layout",
